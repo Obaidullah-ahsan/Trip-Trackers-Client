@@ -19,7 +19,7 @@ const Banner = () => {
         loop={true}
         navigation={true}
         modules={[Autoplay, Navigation]}
-        className="mySwiper h-[600px]"
+        className="mySwiper h-[560px]"
       >
         <SwiperSlide>
           <div className="slider1 h-full flex items-center">
@@ -32,7 +32,7 @@ const Banner = () => {
               </p>
               <p className="relative text-white z-50 animate__animated animate__backInRight">
                 Discover the world like never before with TripTrackers, your
-                trusted travel companion. Whether your'e planning a relaxing
+                trusted travel companion. Whether youre planning a relaxing
                 getaway, an adrenaline-pumping adventure, or a cultural
                 exploration, TripTrackers has you covered.
               </p>
@@ -69,7 +69,7 @@ const Banner = () => {
               <p className="relative text-white z-50 animate__animated animate__backInRight">
                 Experience travel like never before with TripTrackers, your
                 gateway to unforgettable journeys around the globe. Whether
-                you're a seasoned globetrotter or a first-time explorer, our
+                youre a seasoned globetrotter or a first-time explorer, our
                 comprehensive platform caters to your every need.
               </p>
             </div>

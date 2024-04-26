@@ -13,11 +13,11 @@ const Login = () => {
       <div className="w-[60%]">
         <img
           src={`https://i.ibb.co/rHY0M5C/mantas-hesthaven-g1-Wdc-Kc-V3w-unsplash.jpg`}
-          className="h-full w-full max-h-[500px]"
+          className="h-full w-full max-h-[550px]"
           alt=""
         />
       </div>
-      <div className="w-[40%] max-h-[500px] p-8 space-y-3 bg-base-200 dark:bg-gray-200 dark:text-gray-800">
+      <div className="w-[40%] max-h-[550px] p-8 space-y-3 bg-base-200 dark:bg-gray-200 dark:text-gray-800">
         <h1 className="text-3xl font-bold text-center">Login Now!</h1>
         <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-1 text-sm">
@@ -44,9 +44,7 @@ const Login = () => {
             />
           </div>
           <div className="flex justify-end text-xs dark:text-gray-600">
-            <a rel="noopener noreferrer" href="#">
-              Forgot Password?
-            </a>
+            <a>Forgot Password?</a>
           </div>
           <button className="h-9 min-h-9 rounded-md font-semibold bg-[#43BA7F] text-white w-full">
             Login

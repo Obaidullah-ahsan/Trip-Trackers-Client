@@ -10,6 +10,7 @@ const Register = () => {
         const photo = form.photo.value;
         const password = form.password.value;
         const user = {name,email,photo,password}
+        console.log(user);
       };
     return (
         <div className="flex h-[520px]">
