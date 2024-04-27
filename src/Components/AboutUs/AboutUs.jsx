@@ -11,7 +11,7 @@ const AboutUs = () => {
           </h1>
         </Fade>
         <Fade cascade Fade direction="up">
-          <p className="mt-7">
+          <p className="mt-5">
             Welcome to our Trip Trackers websites Explore All Tourist Spots of
             The World section! Embark on a virtual journey across the globe as
             we guide you through an array of captivating destinations waiting to
