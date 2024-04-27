@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Navbar.css"
+import "./Navbar.css";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [theme, setTheme] = useState("light");
   const handleToggle = (e) => {
     if (e.target.checked) {
@@ -12,16 +14,29 @@ const Navbar = () => {
     }
   };
 
+
   useEffect(() => {
     document.querySelector("html").setAttribute("data-theme", theme);
   }, [theme]);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
   const navLink = (
     <>
       <li>
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "bg-[#43BA7F] p-2 rounded-md" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "bg-[#43BA7F] p-2 rounded-md"
+              : ""
           }
         >
           Home
@@ -31,7 +46,11 @@ const Navbar = () => {
         <NavLink
           to="/alltouristspot"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "bg-[#43BA7F] p-2 rounded-md" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "bg-[#43BA7F] p-2 rounded-md"
+              : ""
           }
         >
           All Tourists Spot
@@ -41,7 +60,11 @@ const Navbar = () => {
         <NavLink
           to="/addtouristspot"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "bg-[#43BA7F] p-2 rounded-md" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "bg-[#43BA7F] p-2 rounded-md"
+              : ""
           }
         >
           Add Tourists Spot
@@ -51,7 +74,11 @@ const Navbar = () => {
         <NavLink
           to="/mylist"
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "bg-[#43BA7F] p-2 rounded-md" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "bg-[#43BA7F] p-2 rounded-md"
+              : ""
           }
         >
           My List
@@ -129,12 +156,51 @@ const Navbar = () => {
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </label>
-        <Link to="/login" className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-3">
-          Login
-        </Link>
-        <Link to="/register" className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-3">
-          Register
-        </Link>
+        {user ? (
+          <div
+            className="dropdown mx-3 tooltip tooltip-bottom dropdown-end"
+            data-tip="hello"
+          >
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://i.ibb.co/3k2KPSs/1699865230403-01-jpeg.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <button
+                onClick={handleLogout}
+                className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-3"
+              >
+                logout
+              </button>
+            </ul>
+          </div>
+        ) : (
+          <div>
+            <Link
+              to="/login"
+              className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-3"
+            >
+              Login
+            </Link>
+            <Link
+              to="/register"
+              className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-3"
+            >
+              Register
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
