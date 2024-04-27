@@ -1,19 +1,34 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../Provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import auth from "../../Firebase/firebase.config";
 
 const Register = () => {
-    const handleRegister = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const name = form.name.value;
-        const email = form.email.value;
-        const photo = form.photo.value;
-        const password = form.password.value;
-        const user = {name,email,photo,password}
-        console.log(user);
-      };
-    return (
-        <div className="flex h-[520px]">
+  const { createUser} = useContext(AuthContext);
+  const handleRegister = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photo = form.photo.value;
+    const password = form.password.value;
+    const user = { name, email, photo, password };
+    console.log(user);
+    createUser(email, password)
+      .then((result) => {
+        updateProfile(auth.currentUser, { displayName: name, photoURL: photo })
+          .then(() => {})
+          .catch(() => {});
+          form.reset()
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
+  return (
+    <div className="flex h-[520px]">
       <div className="w-[60%]">
         <img
           src={`https://i.ibb.co/xJf1NG1/nicole-geri-g-MJ3t-FOLvn-A-unsplash.jpg`}
@@ -48,7 +63,7 @@ const Register = () => {
           </div>
           <div className="space-y-1 text-sm">
             <label htmlFor="username" className="block dark:text-gray-600">
-            Photo URL
+              Photo URL
             </label>
             <input
               type="photo"
@@ -81,7 +96,7 @@ const Register = () => {
         </p>
       </div>
     </div>
-    );
+  );
 };
 
 export default Register;
