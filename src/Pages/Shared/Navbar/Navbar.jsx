@@ -158,8 +158,8 @@ const Navbar = () => {
         </label>
         {user ? (
           <div
-            className="dropdown mx-3 tooltip tooltip-bottom dropdown-end"
-            data-tip="hello"
+            className="dropdown z-40 ml-3 mr-7 tooltip tooltip-bottom dropdown-end"
+            data-tip={`${user.displayName}`}
           >
             <div
               tabIndex={0}

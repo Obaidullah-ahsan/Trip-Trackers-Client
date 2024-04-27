@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, googleLogin } = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -11,6 +11,15 @@ const Login = () => {
     const password = form.password.value;
     console.log(email, password);
     loginUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
+  const handleGoogleLogin = () => {
+    googleLogin()
       .then((result) => {
         console.log(result.user);
       })
@@ -75,6 +84,7 @@ const Login = () => {
         </div>
         <div className="flex justify-center space-x-4">
           <button
+            onClick={handleGoogleLogin}
             aria-label="Login with Google"
             type="button"
             className="flex items-center justify-center w-full font-semibold bg-[#43BA7F] text-white p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600"
