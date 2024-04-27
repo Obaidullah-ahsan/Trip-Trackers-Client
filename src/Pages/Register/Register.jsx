@@ -1,11 +1,15 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../Firebase/firebase.config";
+import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-  const { createUser} = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -15,16 +19,33 @@ const Register = () => {
     const password = form.password.value;
     const user = { name, email, photo, password };
     console.log(user);
+
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(password)) {
+      return toast.error("Password must have an Uppercase, Lowercase, Length must be 6 character")
+    }
     createUser(email, password)
       .then((result) => {
         updateProfile(auth.currentUser, { displayName: name, photoURL: photo })
           .then(() => {})
           .catch(() => {});
-          form.reset()
+        form.reset();
         console.log(result.user);
+        Swal.fire({
+          title: "Success",
+          text: "User Register Successfully",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
+        navigate("/");
       })
       .catch((error) => {
         console.error(error.message);
+        Swal.fire({
+          title: "Error!",
+          text: `${error.code}`,
+          icon: "error",
+          confirmButtonText: "Try Again",
+        });
       });
   };
   return (
@@ -47,6 +68,7 @@ const Register = () => {
               type="name"
               name="name"
               placeholder="Name"
+              required
               className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
             />
           </div>
@@ -58,6 +80,7 @@ const Register = () => {
               type="email"
               name="email"
               placeholder="Email"
+              required
               className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
             />
           </div>
@@ -69,6 +92,7 @@ const Register = () => {
               type="photo"
               name="photo"
               placeholder="Photo URL"
+              required
               className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
             />
           </div>
@@ -81,6 +105,7 @@ const Register = () => {
               name="password"
               id="password"
               placeholder="Password"
+              required
               className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
             />
           </div>
@@ -95,6 +120,7 @@ const Register = () => {
           </Link>
         </p>
       </div>
+      <ToastContainer/>
     </div>
   );
 };
