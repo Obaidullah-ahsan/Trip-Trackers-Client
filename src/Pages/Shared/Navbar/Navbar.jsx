@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -13,7 +15,6 @@ const Navbar = () => {
       setTheme("light");
     }
   };
-
 
   useEffect(() => {
     document.querySelector("html").setAttribute("data-theme", theme);
@@ -113,7 +114,7 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <a className="btn btn-ghost text-white text-2xl">daisyUI</a>
+        <a className="btn btn-ghost text-white text-2xl">Trip Trackers</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="navMenu menu-horizontal text-white px-1">{navLink}</ul>
@@ -157,10 +158,7 @@ const Navbar = () => {
           </svg>
         </label>
         {user ? (
-          <div
-            className="dropdown z-40 ml-3 mr-7 tooltip tooltip-bottom dropdown-end"
-            data-tip={`${user.displayName}`}
-          >
+          <div className="dropdown z-40 ml-3 mr-7 dropdown-end">
             <div
               tabIndex={0}
               role="button"
@@ -168,6 +166,8 @@ const Navbar = () => {
             >
               <div className="w-10 rounded-full">
                 <img
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content={`${user.displayName}`}
                   alt="Tailwind CSS Navbar component"
                   src={`${user.photoURL}`}
                 />
@@ -184,6 +184,7 @@ const Navbar = () => {
                 logout
               </button>
             </ul>
+            <Tooltip className=" pr-3" id="my-tooltip" place="bottom-start" />
           </div>
         ) : (
           <div>
