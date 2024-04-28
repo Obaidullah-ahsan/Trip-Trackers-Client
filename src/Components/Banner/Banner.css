@@ -1,16 +1,17 @@
 .slider1 {
-  background-image:linear-gradient(0deg, #0b0617e5 0%, #07021100 100%), url("https://i.ibb.co/QNJ8v6g/travel41.jpg");
+  background-image: linear-gradient(0deg, #0b0617e5 0%, #07021100 100%),
+    url("https://i.ibb.co/TtxwtLG/28032.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.slider1::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 31, 31, 0.7);
+.slider1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 31, 31, 0.7);
 }
 .slider2 {
   background-image: linear-gradient(0deg, #0b0617e5 0%, #07021100 100%),
@@ -18,14 +19,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.slider2::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 31, 31, 0.7);
+.slider2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 31, 31, 0.7);
 }
 .slider3 {
   background-image: linear-gradient(0deg, #0b0617e5 0%, #07021100 100%),
@@ -33,14 +34,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.slider3::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 31, 31, 0.7);
+.slider3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 31, 31, 0.7);
 }
 .slider4 {
   background-image: linear-gradient(0deg, #0b0617e5 0%, #07021100 100%),
@@ -48,13 +49,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.slider4::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(33, 31, 31, 0.7);
+.slider4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 31, 31, 0.7);
 }
-
