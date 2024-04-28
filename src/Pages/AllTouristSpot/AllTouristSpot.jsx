@@ -1,4 +1,3 @@
-import { Fade } from "react-awesome-reveal";
 import { useLoaderData } from "react-router-dom";
 import AllTouristSpotsCard from "../../Components/AllTouristSpotsCard/AllTouristSpotsCard";
 import { useState } from "react";

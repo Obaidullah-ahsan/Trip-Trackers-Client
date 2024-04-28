@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 
 const AboutUs = () => {
   return (
-    <div className="flex gap-7 my-20 mx-20">
+    <div className="flex flex-col lg:flex-row gap-7 my-20 mx-20">
       <div className="flex-1">
         <h3 className="text-[#fc8621] text-lg font-bold">ABOUT US</h3>
         <Fade cascade Fade direction="up">

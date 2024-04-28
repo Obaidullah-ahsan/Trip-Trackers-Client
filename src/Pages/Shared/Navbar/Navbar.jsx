@@ -114,12 +114,12 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <a className="btn btn-ghost text-white text-2xl font-Playfair-Display">Trip Trackers</a>
+        <a className="btn btn-ghost text-white px-0 md:px-4 text-base md:text-2xl font-Playfair-Display">Trip Trackers</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="navMenu menu-horizontal text-white px-1">{navLink}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end w-[65%] md:w-[50%]">
         <label className="cursor-pointer grid place-items-center">
           <input
             onChange={handleToggle}
@@ -190,13 +190,13 @@ const Navbar = () => {
           <div>
             <Link
               to="/login"
-              className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-3"
+              className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-1 md:ml-3"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-3"
+              className="btn min-h-9 h-9 text-white bg-[#43BA7F] border-none ml-1 md:ml-3"
             >
               Register
             </Link>

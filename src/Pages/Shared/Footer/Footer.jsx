@@ -8,7 +8,11 @@ const Footer = () => {
               Trip Trackers
             </span>
           </a>
-          <p className="text-base pl-4 pt-2">Contact : +044 034 364 85634</p>
+          <a className="flex justify-center space-x-3 lg:justify-start">
+            <span className="self-center ml-4 font-semibold font-Playfair-Display">
+              Contact : +044 034 364 85634
+            </span>
+          </a>
         </div>
         <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3">

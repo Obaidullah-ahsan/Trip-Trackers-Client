@@ -51,8 +51,7 @@ const WhyChoose = () => {
                 <div className="card-body">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Paris</h2>
                   <p>
-                    Famous eiffel tower paris with gorgeous colors and beauty of
-                    paris
+                    Famous eiffel tower paris with gorgeous colors
                   </p>
                 </div>
               </div>
@@ -69,8 +68,7 @@ const WhyChoose = () => {
                 <div className="card-body">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Italy</h2>
                   <p>
-                    Cinque Terre National Park surrounded by the sea under the
-                    sunlight in Italy
+                    Cinque Terre National Park surrounded by the sea in Italy
                   </p>
                 </div>
               </div>
@@ -116,7 +114,7 @@ const WhyChoose = () => {
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Netherlands</h2>
-                  <p>Beautiful shot of the historic Binnenhof castle in the Netherlands</p>
+                  <p>Beautiful shot of the histor castle in the Netherlands</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -131,7 +129,7 @@ const WhyChoose = () => {
                 </figure>
                 <div className="card-body">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Switzerland</h2>
-                  <p>Young woman hiker taking photo with smartphone on mountains peak in winter</p>
+                  <p>Young woman hiker mountains peak in winter</p>
                 </div>
               </div>
             </SwiperSlide>

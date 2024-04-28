@@ -82,15 +82,15 @@ const Login = () => {
       });
   };
   return (
-    <div className="flex h-[550px]">
-      <div className="w-[60%]">
+    <div className="flex flex-col lg:flex-row lg:h-[550px]">
+      <div className="lg:w-[60%]">
         <img
           src={`https://i.ibb.co/rHY0M5C/mantas-hesthaven-g1-Wdc-Kc-V3w-unsplash.jpg`}
-          className="h-full w-full max-h-[550px]"
+          className="h-full w-full max-h-96 lg:max-h-[550px]"
           alt=""
         />
       </div>
-      <div className="w-[40%] max-h-[550px] p-8 space-y-3 bg-base-200 dark:bg-gray-200 dark:text-gray-800">
+      <div className="lg:w-[40%] max-h-[550px] p-8 space-y-3 bg-base-200 dark:bg-gray-200 dark:text-gray-800">
         <h1 className="text-3xl font-bold text-center font-Playfair-Display">Login Now!</h1>
         <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-1 text-sm">

@@ -49,15 +49,15 @@ const Register = () => {
       });
   };
   return (
-    <div className="flex h-[520px]">
-      <div className="w-[60%]">
+    <div className="flex flex-col lg:flex-row lg:h-[520px]">
+      <div className="lg:w-[60%]">
         <img
           src={`https://i.ibb.co/xJf1NG1/nicole-geri-g-MJ3t-FOLvn-A-unsplash.jpg`}
           className="h-full w-full max-h-[520px]"
           alt=""
         />
       </div>
-      <div className="w-[40%] max-h-[520px] px-8 py-2 space-y-2 bg-base-200 dark:bg-gray-200 dark:text-gray-800">
+      <div className="lg:w-[40%] max-h-[520px] px-8 py-2 space-y-2 bg-base-200 dark:bg-gray-200 dark:text-gray-800">
         <h1 className="text-3xl font-bold text-center font-Playfair-Display">Register Now!</h1>
         <form onSubmit={handleRegister} className="space-y-6">
           <div className="space-y-1 text-sm">

@@ -34,7 +34,7 @@ const TouristsSpotsCard = ({ touristSpot }) => {
             <p className="dark:text-gray-800">{description.slice(0, 60)}</p>
             <p>Avarage Cost : {averageCost}</p>
           </div>
-          <Link className="btn bg-[#43BA7F] p-2 rounded-md text-white font-semibold text-base">
+          <Link to={`/viewdetails/${_id}`} className="btn bg-[#43BA7F] p-2 rounded-md text-white font-semibold text-base">
             View Details
           </Link>
         </div>
