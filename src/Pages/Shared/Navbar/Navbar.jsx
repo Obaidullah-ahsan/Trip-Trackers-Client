@@ -114,7 +114,7 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <a className="btn btn-ghost text-white text-2xl">Trip Trackers</a>
+        <a className="btn btn-ghost text-white text-2xl font-Playfair-Display">Trip Trackers</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="navMenu menu-horizontal text-white px-1">{navLink}</ul>

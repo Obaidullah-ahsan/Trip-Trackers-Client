@@ -6,7 +6,7 @@ const AboutUs = () => {
       <div className="flex-1">
         <h3 className="text-[#fc8621] text-lg font-bold">ABOUT US</h3>
         <Fade cascade Fade direction="up">
-          <h1 className="text-5xl leading-[53px] font-bold">
+          <h1 className="text-5xl leading-[53px] font-bold font-Playfair-Display">
             Explore All Tourists Spot of The World
           </h1>
         </Fade>

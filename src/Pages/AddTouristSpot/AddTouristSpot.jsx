@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddTouristSpot = () => {
   const { user } = useContext(AuthContext);
@@ -22,34 +23,54 @@ const AddTouristSpot = () => {
     e.preventDefault();
     const form = e.target;
     const image = form.image.value;
-    const tourists_spot_name = form.tourists_spot_name.value;
-    const country_Name = myValue;
+    const touristsSpotName = form.tourists_spot_name.value;
+    const countryName = myValue;
     const location = form.location.value;
     const description = form.description.value;
-    const average_cost = form.average_cost.value;
+    const averageCost = form.average_cost.value;
     const seasonality = form.seasonality.value;
-    const travel_time = form.travel_time.value;
+    const traveltime = form.travel_time.value;
     const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
     const email = user.email;
     const name = user.displayName;
-    const spot = {
+    const touristSpot = {
       image,
-      tourists_spot_name,
-      country_Name,
+      touristsSpotName,
+      countryName,
       location,
       description,
-      average_cost,
+      averageCost,
       seasonality,
-      travel_time,
+      traveltime,
       totalVisitorsPerYear,
       email,
       name,
     };
-    console.log(spot);
+    console.log(touristSpot);
+    fetch("http://localhost:5000/touristspot", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(touristSpot),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Succees!",
+            text: "Tourist spot added successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        }
+        form.reset();
+      });
   };
   return (
     <section className="p-6 mx-20 pb-20 bg-base-300 dark:bg-gray-100 dark:text-gray-900">
-      <h1 className="text-4xl font-bold text-center mx-auto mb-7">
+      <h1 className="text-4xl font-bold text-center mx-auto mb-7 font-Playfair-Display">
         Add Tourist Spot
       </h1>
       <form
@@ -207,7 +228,7 @@ const AddTouristSpot = () => {
           </div>
           <div className="col-span-full mt-3">
             <button className="btn w-full bg-[#43BA7F] text-base font-semibold text-white rounded-md">
-              Add Spot
+              Add Tourist Spot
             </button>
           </div>
         </div>

@@ -26,7 +26,7 @@ const Banner = () => {
           <div className="slider1 h-full flex items-center">
             <div className="max-w-2xl ml-24 space-y-5">
               <Fade direction="left">
-                <h1 className="text-5xl font-semibold relative text-white z-50">
+                <h1 className="text-5xl font-Playfair-Display font-semibold relative text-white z-50">
                   Embark on Your Next Adventure with TripTrackers
                 </h1>
               </Fade>
@@ -58,7 +58,7 @@ const Banner = () => {
           <div className="slider2 h-full flex items-center">
             <div className="max-w-2xl ml-24 space-y-5">
               <Fade direction="left">
-                <h1 className="text-5xl font-semibold relative text-white z-50">
+                <h1 className="text-5xl font-semibold font-Playfair-Display relative text-white z-50">
                   Unlock Boundless Adventures with TripTrackers
                 </h1>
               </Fade>
@@ -90,7 +90,7 @@ const Banner = () => {
           <div className="slider3 h-full flex items-center">
             <div className="max-w-2xl ml-24 space-y-5">
               <Fade direction="left">
-                <h1 className="text-5xl font-semibold relative text-white z-50">
+                <h1 className="text-5xl font-semibold font-Playfair-Display relative text-white z-50">
                   Elevate Your Travels with TripTrackers
                 </h1>
               </Fade>
@@ -122,7 +122,7 @@ const Banner = () => {
           <div className="slider4 h-full flex items-center">
             <div className="max-w-2xl ml-24 space-y-5">
               <Fade direction="left">
-                <h1 className="text-5xl font-semibold relative text-white z-50">
+                <h1 className="text-5xl font-semibold font-Playfair-Display relative text-white z-50">
                   Set Your Sights on New Horizons with TripTrackers
                 </h1>
               </Fade>

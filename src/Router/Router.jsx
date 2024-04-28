@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Register from "../Pages/Register/Register";
 import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
+import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
 
 const router = createBrowserRouter([
   {
@@ -14,11 +15,13 @@ const router = createBrowserRouter([
     children:[
         {
             path: "/",
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader: ()=> fetch("http://localhost:5000/touristspot")
         },
         {
             path: "/alltouristspot",
-            element:<Login></Login>
+            element:<AllTouristSpot></AllTouristSpot>,
+            loader: ()=> fetch("http://localhost:5000/touristspot")
         },
         {
             path: "/addtouristspot",

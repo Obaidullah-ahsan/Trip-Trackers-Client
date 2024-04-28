@@ -91,7 +91,7 @@ const Login = () => {
         />
       </div>
       <div className="w-[40%] max-h-[550px] p-8 space-y-3 bg-base-200 dark:bg-gray-200 dark:text-gray-800">
-        <h1 className="text-3xl font-bold text-center">Login Now!</h1>
+        <h1 className="text-3xl font-bold text-center font-Playfair-Display">Login Now!</h1>
         <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-1 text-sm">
             <label htmlFor="username" className="block dark:text-gray-600">

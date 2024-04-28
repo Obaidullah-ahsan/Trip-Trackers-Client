@@ -10,7 +10,7 @@ const WhyChoose = () => {
       <div className="max-w-4xl ml-20">
         <h3 className="text-[#fc8621] text-lg font-bold">WHAT WE SERVE</h3>
         <Fade cascade Fade direction="up">
-          <h1 className="text-5xl leading-[55px] font-bold">
+          <h1 className="text-5xl leading-[55px] font-bold font-Playfair-Display">
             Why Choose The Trip Trackers?
           </h1>
         </Fade>
@@ -49,7 +49,7 @@ const WhyChoose = () => {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Enjoy the beauty of Paris</h2>
+                  <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Paris</h2>
                   <p>
                     Famous eiffel tower paris with gorgeous colors and beauty of
                     paris
@@ -67,7 +67,7 @@ const WhyChoose = () => {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Enjoy the beauty of Italy</h2>
+                  <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Italy</h2>
                   <p>
                     Cinque Terre National Park surrounded by the sea under the
                     sunlight in Italy
@@ -85,7 +85,7 @@ const WhyChoose = () => {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Enjoy the beauty of Englend</h2>
+                  <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Englend</h2>
                   <p>Famous Tower Bridge in the evening, London, England</p>
                 </div>
               </div>
@@ -100,7 +100,7 @@ const WhyChoose = () => {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Enjoy the beauty of Spain</h2>
+                  <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Spain</h2>
                   <p>Toledo from hill in summer morning enjoy the sky view</p>
                 </div>
               </div>
@@ -115,7 +115,7 @@ const WhyChoose = () => {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Enjoy the beauty of Netherlands</h2>
+                  <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Netherlands</h2>
                   <p>Beautiful shot of the historic Binnenhof castle in the Netherlands</p>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const WhyChoose = () => {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title">Enjoy the beauty of Switzerland</h2>
+                  <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Switzerland</h2>
                   <p>Young woman hiker taking photo with smartphone on mountains peak in winter</p>
                 </div>
               </div>
