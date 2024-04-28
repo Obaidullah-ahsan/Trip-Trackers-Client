@@ -42,7 +42,7 @@ const Register = () => {
         console.error(error.message);
         Swal.fire({
           title: "Error!",
-          text: `${error.code}`,
+          text: `${error.code=="auth/email-already-in-use"?"Email already use":"Error"}`,
           icon: "error",
           confirmButtonText: "Try Again",
         });

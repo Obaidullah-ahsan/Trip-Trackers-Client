@@ -21,13 +21,13 @@ const Login = () => {
           icon: "success",
           confirmButtonText: "Ok",
         });
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         console.error(error.message);
         Swal.fire({
           title: "Error!",
-          text: `${error.code}`,
+          text: "Email and password doesn’t match",
           icon: "error",
           confirmButtonText: "Try Again",
         });
@@ -43,13 +43,13 @@ const Login = () => {
           icon: "success",
           confirmButtonText: "Ok",
         });
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         console.error(error.message);
         Swal.fire({
           title: "Error!",
-          text: `${error.code}`,
+          text: `${error.code.slice(5, 50)}`,
           icon: "error",
           confirmButtonText: "Try Again",
         });
@@ -65,13 +65,17 @@ const Login = () => {
           icon: "success",
           confirmButtonText: "Ok",
         });
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         console.error(error.message);
         Swal.fire({
           title: "Error!",
-          text: `${error.code}`,
+          text: `${
+            error.code == "auth/account-exists-with-different-credential"
+              ? "Your email exists with different method"
+              : "Try Another Way"
+          }`,
           icon: "error",
           confirmButtonText: "Try Again",
         });

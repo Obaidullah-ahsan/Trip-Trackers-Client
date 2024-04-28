@@ -28,7 +28,7 @@ const WhyChoose = () => {
       <Fade Fade direction="up">
         <div className="mx-20">
           <Swiper
-            lg:slidesPerView={3}
+            slidesPerView={3}
             spaceBetween={30}
             autoplay={{
               delay: 2000,
