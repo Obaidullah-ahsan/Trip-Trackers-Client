@@ -25,8 +25,9 @@ const router = createBrowserRouter([
             loader: ()=> fetch("http://localhost:5000/touristspot")
         },
         {
-            path: "/viewdetails/:id",
+            path: "/touristspot/:id",
             element:<ViewDetails></ViewDetails>,
+            loader: ({params})=> fetch(`http://localhost:5000/touristspot/${params.id}`)
         },
         {
             path: "/addtouristspot",

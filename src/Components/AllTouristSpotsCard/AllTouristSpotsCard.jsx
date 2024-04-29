@@ -31,7 +31,7 @@ const AllTouristSpotsCard = ({ touristSpot }) => {
           <p>Seasonality : {seasonality}</p>
         </div>
         <Link
-          to={`/viewdetails/${_id}`}
+          to={`/touristspot/${_id}`}
           className="btn bg-[#43BA7F] p-2 rounded-md text-white font-semibold text-base"
         >
           View Details
