@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { MdDeleteForever, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
   const { user } = useContext(AuthContext) || {};
@@ -44,7 +45,7 @@ const MyList = () => {
     });
   };
   return (
-    <div className="lg:mx-10">
+    <div className="lg:mx-10 min-h-[calc(100vh-338px)]">
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
@@ -67,9 +68,11 @@ const MyList = () => {
                 <td>{mylist.averageCost}</td>
                 <td className="hidden md:block mt-3">{mylist.seasonality}</td>
                 <td className="px-2 md:px-4">
-                  <button className="btn bg-[#43BA7F]">
+                  <Link to={`/updatetouristspot/${mylist._id}`}
+                    className="btn bg-[#43BA7F]"
+                  >
                     <MdEdit color="white" />
-                  </button>
+                  </Link>
                 </td>
                 <td className="px-2 md:px-4">
                   <button
