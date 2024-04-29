@@ -13,12 +13,12 @@ const TouristsSpotsCard = ({ touristSpot }) => {
   console.log(_id);
   return (
     <Fade Fade direction="up">
-      <div className=" flex max-h-72 shadow-md dark:bg-gray-50 dark:text-gray-800">
+      <div className=" flex md:max-h-72 shadow-md dark:bg-gray-50 dark:text-gray-800">
         <div className="w-[50%]">
           <img
             src={image}
             alt=""
-            className="object-cover object-center  w-full h-72 dark:bg-gray-500"
+            className="object-cover object-center  w-full h-full md:h-72 dark:bg-gray-500"
           />
         </div>
         <div className="flex w-[50%] flex-col justify-between p-6 space-y-8">

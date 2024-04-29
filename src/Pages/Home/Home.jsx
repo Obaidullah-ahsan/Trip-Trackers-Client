@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className="my-20 mx-20">
+      <div className="my-10 md:my-20 mx-4 md:mx-7 lg:mx-20">
         <div className="max-w-4xl mb-7">
           <Fade Fade direction="up">
             <h1 className="text-5xl leading-[55px] font-bold font-Playfair-Display">Tourist Spots</h1>

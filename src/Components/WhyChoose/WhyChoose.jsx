@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 const WhyChoose = () => {
   return (
     <div className="my-28">
-      <div className="max-w-4xl ml-20">
+      <div className="max-w-4xl mx-4 md:mx-7 lg:ml-20">
         <h3 className="text-[#fc8621] text-lg font-bold">WHAT WE SERVE</h3>
         <Fade cascade Fade direction="up">
           <h1 className="text-5xl leading-[55px] font-bold font-Playfair-Display">
@@ -26,7 +26,7 @@ const WhyChoose = () => {
         </Fade>
       </div>
       <Fade Fade direction="up">
-        <div className="mx-20">
+        <div className="mx-20 hidden md:block">
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -48,7 +48,7 @@ const WhyChoose = () => {
                     className="h-44 w-full"
                   />
                 </figure>
-                <div className="card-body">
+                <div className="card-body h-32">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Paris</h2>
                   <p>
                     Famous eiffel tower paris with gorgeous colors
@@ -65,7 +65,7 @@ const WhyChoose = () => {
                     className="h-44 w-full"
                   />
                 </figure>
-                <div className="card-body">
+                <div className="card-body h-32">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Italy</h2>
                   <p>
                     Cinque Terre National Park surrounded by the sea in Italy
@@ -82,7 +82,7 @@ const WhyChoose = () => {
                     className="h-44 w-full"
                   />
                 </figure>
-                <div className="card-body">
+                <div className="card-body h-32">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Englend</h2>
                   <p>Famous Tower Bridge in the evening, London, England</p>
                 </div>
@@ -97,7 +97,7 @@ const WhyChoose = () => {
                     className="h-44 w-full"
                   />
                 </figure>
-                <div className="card-body">
+                <div className="card-body h-32">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Spain</h2>
                   <p>Toledo from hill in summer morning enjoy the sky view</p>
                 </div>
@@ -112,7 +112,7 @@ const WhyChoose = () => {
                     className="h-44 w-full"
                   />
                 </figure>
-                <div className="card-body">
+                <div className="card-body h-32">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Netherlands</h2>
                   <p>Beautiful shot of the histor castle in the Netherlands</p>
                 </div>
@@ -127,7 +127,7 @@ const WhyChoose = () => {
                     className="h-44 w-full"
                   />
                 </figure>
-                <div className="card-body">
+                <div className="card-body h-32">
                   <h2 className="card-title font-Playfair-Display">Enjoy the beauty of Switzerland</h2>
                   <p>Young woman hiker mountains peak in winter</p>
                 </div>

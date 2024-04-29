@@ -37,7 +37,7 @@ const AllTouristSpot = () => {
   };
   console.log(sortValue);
   return (
-    <div className="mx-20 mb-20 mt-10">
+    <div className="mx-2 md:mx-5 lg:mx-20 mb-20 mt-10">
       <h1 className="text-4xl font-bold text-center mx-auto mb-7 font-Playfair-Display">
         Add Tourist Spot
       </h1>

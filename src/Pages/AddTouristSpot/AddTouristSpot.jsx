@@ -69,7 +69,7 @@ const AddTouristSpot = () => {
       });
   };
   return (
-    <section className="p-6 mx-20 pb-20 bg-base-300 dark:bg-gray-100 dark:text-gray-900">
+    <section className="p-6 mx-3 md:mx-5 lg:mx-20 pb-20 bg-base-300 dark:bg-gray-100 dark:text-gray-900">
       <h1 className="text-4xl font-bold text-center mx-auto mb-7 font-Playfair-Display">
         Add Tourist Spot
       </h1>

@@ -7,6 +7,7 @@ import Register from "../Pages/Register/Register";
 import AddTouristSpot from "../Pages/AddTouristSpot/AddTouristSpot";
 import AllTouristSpot from "../Pages/AllTouristSpot/AllTouristSpot";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import MyList from "../Pages/MyList/MyList";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         {
             path: "/addtouristspot",
             element:<AddTouristSpot></AddTouristSpot>
+        },
+        {
+            path: "/mylist",
+            element:<MyList></MyList>
         },
         {
             path: "/login",

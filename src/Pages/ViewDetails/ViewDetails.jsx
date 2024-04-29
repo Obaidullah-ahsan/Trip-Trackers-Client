@@ -35,8 +35,8 @@ const ViewDetails = () => {
         </p>
         <p className="font-semibold mb-2 mt-4">Location : {location}</p>
         <p className="font-semibold mb-2">Location : {seasonality}</p>
-        <p className="font-semibold mb-2">Area : {traveltime}</p>
-        <p className="font-semibold mb-2">Price : {totalVisitorsPerYear}</p>
+        <p className="font-semibold mb-2">Travel time : {traveltime}</p>
+        <p className="font-semibold mb-2">Total visitors per year : {totalVisitorsPerYear}</p>
         <div className="my-4">
           <h2 className="text-xl font-bold text-[#43BA7F] border-y py-2  font-Playfair-Display">
             Added User Info
