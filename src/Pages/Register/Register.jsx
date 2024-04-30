@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser , setReload} = useContext(AuthContext);
   const navigate = useNavigate();
   const handleRegister = (event) => {
     event.preventDefault();
@@ -26,7 +26,9 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         updateProfile(auth.currentUser, { displayName: name, photoURL: photo })
-          .then(() => {})
+          .then(() => {
+            setReload(true)
+          })
           .catch(() => {});
         form.reset();
         console.log(result.user);

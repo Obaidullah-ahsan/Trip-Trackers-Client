@@ -1,10 +1,21 @@
-import { useLoaderData } from "react-router-dom";
+import { GridLoader } from "react-spinners";
 import AllTouristSpotsCard from "../../Components/AllTouristSpotsCard/AllTouristSpotsCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const AllTouristSpot = () => {
-  const touristSpots = useLoaderData();
+  const [loading, setLoading] = useState(false);
   const [sortValue, setSortValue] = useState(null);
+  const [touristSpots, setTouristSpots] = useState([]);
+  useEffect(() => {
+    setLoading(true);
+    fetch("http://localhost:5000/touristspot")
+      .then((res) => res.json())
+      .then((data) => {
+        setTouristSpots(data);
+        setLoading(false);
+      });
+  }, []);
+
   const sortedArray = touristSpots.sort((a, b) => {
     let averageCostInt1 = parseInt(a.averageCost.slice(1, 10));
     let averageCostInt2 = parseInt(b.averageCost.slice(1, 10));
@@ -36,6 +47,7 @@ const AllTouristSpot = () => {
     setSortValue(e.target.value);
   };
   console.log(sortValue);
+  // setLoading(false)
   return (
     <div className="mx-2 md:mx-5 lg:mx-20 mb-20 mt-10">
       <h1 className="text-4xl font-bold text-center mx-auto mb-7 font-Playfair-Display">
@@ -57,14 +69,20 @@ const AllTouristSpot = () => {
           ))}
         </select>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sortedArray.map((touristSpot) => (
-          <AllTouristSpotsCard
-            key={touristSpot._id}
-            touristSpot={touristSpot}
-          ></AllTouristSpotsCard>
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center items-center min-h-[calc(100vh-338px)]">
+          <GridLoader color="#36d7b7" />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sortedArray.map((touristSpot) => (
+            <AllTouristSpotsCard
+              key={touristSpot._id}
+              touristSpot={touristSpot}
+            ></AllTouristSpotsCard>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
