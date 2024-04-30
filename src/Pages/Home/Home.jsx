@@ -4,6 +4,7 @@ import Banner from "../../Components/Banner/Banner";
 import WhyChoose from "../../Components/WhyChoose/WhyChoose";
 import { useLoaderData } from "react-router-dom";
 import TouristsSpotsCard from "../../Components/TouristsSpotsCard/TouristsSpotsCard";
+import Countries from "../../Components/Countries/Countries";
 
 const Home = () => {
   const touristSpots = useLoaderData();
@@ -35,6 +36,7 @@ const Home = () => {
         ))}
         </div>
       </div>
+      <Countries></Countries>
       <WhyChoose></WhyChoose>
       <AboutUs></AboutUs>
     </div>

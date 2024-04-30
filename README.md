@@ -1,8 +1,10 @@
-# React + Vite
+- Live site URL [@Trip Trackers](https://b9a10-triptrackers-website.web.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Trip Trackers
 
-Currently, two official plugins are available:
+Welcome to Trip Trackers, your ultimate travel companion! Trip Trackers helps you discover, plan, and remember your travel adventures. This application allows you to browse, add, and manage tourist spots as well as plan your trips with ease. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- _Add Tourist Spot_:- This page allows users to add new tourist spots to the database.
+- _All Tourist Spots:-_ View a list of all tourist spots stored in the database.
+- _My List:-_ Users can view all tourist spots they have added. This section allows users to edit or delete their own entries, facilitating easy management of content they've contributed.
+- _View Details page:-_ Detailed view of a tourist spot. This page shows detailed information about the tourist spot, including large photos, detailed descriptions, directions.
