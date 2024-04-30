@@ -9,7 +9,7 @@ const MyList = () => {
   const [mylists, setMylists] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/mylist/${user?.email}`)
+    fetch(`https://trip-trackers-server.vercel.app/mylist/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMylists(data));
   }, [user]);
@@ -25,7 +25,7 @@ const MyList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/mylist/${id}`, {
+        fetch(`https://trip-trackers-server.vercel.app/mylist/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

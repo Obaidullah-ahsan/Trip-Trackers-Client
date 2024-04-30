@@ -10,7 +10,7 @@ const CountriesCard = ({ country }) => {
           <img src={image} className="max-h-48 w-full" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{country_Name}</h2>
+          <h2 className="card-title font-bold font-Playfair-Display">{country_Name}</h2>
           <p>{description}</p>
         </div>
       </Link>

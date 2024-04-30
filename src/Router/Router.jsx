@@ -10,6 +10,8 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import MyList from "../Pages/MyList/MyList";
 import UpdateTouristSpot from "../Pages/UpdateTouristSpot/UpdateTouristSpot";
 import PrivateRoutes from "../Routes/PrivateRoutes";
+import SubCountry from "../Pages/SubCountry/SubCountry";
+import SubCountryDetails from "../Components/SubCountryDetails/SubCountryDetails";
 
 const router = createBrowserRouter([
   {
@@ -33,21 +35,47 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/touristspot/${params.id}`),
+          fetch(
+            `https://trip-trackers-server.vercel.app/touristspot/${params.id}`
+          ),
       },
       {
         path: "/addtouristspot",
-        element: <PrivateRoutes><AddTouristSpot></AddTouristSpot></PrivateRoutes>,
+        element: (
+          <PrivateRoutes>
+            <AddTouristSpot></AddTouristSpot>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/updatetouristspot/:id",
-        element: <PrivateRoutes><UpdateTouristSpot></UpdateTouristSpot></PrivateRoutes>,
+        element: (
+          <PrivateRoutes>
+            <UpdateTouristSpot></UpdateTouristSpot>
+          </PrivateRoutes>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/touristspot/${params.id}`),
+          fetch(`https://trip-trackers-server.vercel.app/${params.id}`),
       },
       {
         path: "/mylist",
-        element: <PrivateRoutes><MyList></MyList></PrivateRoutes>,
+        element: (
+          <PrivateRoutes>
+            <MyList></MyList>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/country/:name",
+        element: <SubCountry></SubCountry>,
+        loader: ({ params }) =>
+          fetch(
+            `https://trip-trackers-server.vercel.app/subCountry/${params.name}`
+          ),
+      },
+      {
+        path: "/subCountry/:id",
+        element: <SubCountryDetails></SubCountryDetails>,
       },
       {
         path: "/login",

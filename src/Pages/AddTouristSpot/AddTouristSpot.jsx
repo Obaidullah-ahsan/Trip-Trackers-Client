@@ -47,7 +47,7 @@ const AddTouristSpot = () => {
       name,
     };
     console.log(touristSpot);
-    fetch("http://localhost:5000/touristspot", {
+    fetch("https://trip-trackers-server.vercel.app/touristspot", {
       method: "POST",
       headers: {
         "content-type": "application/json",

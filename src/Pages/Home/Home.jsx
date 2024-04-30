@@ -12,7 +12,7 @@ const Home = () => {
   const [touristSpots, setTouristSpots] = useState([]);
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/touristspot")
+    fetch("https://trip-trackers-server.vercel.app/touristspot")
       .then((res) => res.json())
       .then((data) => {
         setTouristSpots(data);

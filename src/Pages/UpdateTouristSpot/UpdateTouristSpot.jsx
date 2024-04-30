@@ -57,7 +57,7 @@ const UpdateTouristSpot = () => {
       traveltime,
       totalVisitorsPerYear,
     };
-    fetch(`http://localhost:5000/touristspot/${_id}`, {
+    fetch(`https://trip-trackers-server.vercel.app/touristspot/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -8,7 +8,7 @@ const AllTouristSpot = () => {
   const [touristSpots, setTouristSpots] = useState([]);
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/touristspot")
+    fetch("https://trip-trackers-server.vercel.app/touristspot")
       .then((res) => res.json())
       .then((data) => {
         setTouristSpots(data);
@@ -47,7 +47,6 @@ const AllTouristSpot = () => {
     setSortValue(e.target.value);
   };
   console.log(sortValue);
-  // setLoading(false)
   return (
     <div className="mx-2 md:mx-5 lg:mx-20 mb-20 mt-10">
       <h1 className="text-4xl font-bold text-center mx-auto mb-7 font-Playfair-Display">
