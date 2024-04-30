@@ -5,9 +5,9 @@ const CountriesCard = ({ country }) => {
   const { country_Name, image, description } = country;
   return (
     <Fade Fade direction="up">
-      <Link to={`/country/${country_Name}`} className="card card-compact bg-base-100 shadow-xl">
+      <Link to={`/country/${country_Name}`} className="card rounded-none card-compact bg-base-100 shadow-xl">
         <figure>
-          <img src={image} alt="Shoes" />
+          <img src={image} className="max-h-48 w-full" alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{country_Name}</h2>
