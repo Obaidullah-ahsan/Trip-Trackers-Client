@@ -37,7 +37,7 @@ const MyList = () => {
                 text: "Tourist spot has been deleted.",
                 icon: "success",
               });
-              const remaining = mylists.filter((mylist) => mylist._id == id);
+              const remaining = mylists.filter((mylist) => mylist._id !== id);
               setMylists(remaining);
             }
           });
