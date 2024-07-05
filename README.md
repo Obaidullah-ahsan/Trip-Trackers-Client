@@ -10,6 +10,7 @@ Welcome to Trip Trackers, your ultimate travel companion! Trip Trackers helps yo
 - **_My List:-_** Users can view all tourist spots they have added. This section allows users to edit or delete their own entries, facilitating easy management of content they've contributed.
 - **_View Details page:-_** Detailed view of a tourist spot. This page shows detailed information about the tourist spot, including large photos, detailed descriptions, directions.
 
+#### Technologies: HTML, CSS3, TailwindCSS, Java-Script, ReactJs, Firebase(Authentication), NodeJs, ExpressJs, MongoDB etc.
 
 ### Requirement Type:- B9 A10 Type-01 Requirements
 ### Website Themes: (Tourism Management website)
