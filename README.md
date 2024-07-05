@@ -12,5 +12,20 @@ Welcome to Trip Trackers, your ultimate travel companion! Trip Trackers helps yo
 
 #### Technologies: HTML, CSS3, TailwindCSS, Java-Script, ReactJs, Firebase(Authentication), NodeJs, ExpressJs, MongoDB etc.
 
-### Requirement Type:- B9 A10 Type-01 Requirements
-### Website Themes: (Tourism Management website)
+#### Requirement Type:- B9 A10 Type-01 Requirements
+#### Website Themes: (Tourism Management website)
+
+## Cloning an React project and running locally
+- git clone https://github.com/YourUserName/YourRepositoryName.git
+- cd YourRepositoryName
+- Delete node_modules folder and package-lock.json file if exists
+
+### Run this following commands
+```bash
+npm install
+# this will create node_modules folder and package-lock.json
+npm run dev
+# it will start your react app
+```
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
